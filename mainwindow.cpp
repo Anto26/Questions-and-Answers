@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->setupUi(this);
 
     //OPEN THE FILE
-    QFile file("questions.txt");
+    QFile file("questions_answers_database.txt");
     if(file.open(QIODevice::ReadOnly| QIODevice::Text))
     {
         question_answers_struct qas;
@@ -102,10 +102,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
         num_questions = questions_answers.size();
 
         //CALCULATE POINTS PER CORRECT ANSWER
-        PPCA = 10 / questions_answers.size();
+        PPCA = (float)10 / questions_answers.size();
     }
-    else //SHOW AN ERROR
-        showPopUp("Error with the file that contains questions and answer.\n(questions.txt)");
+    else
+        //SHOW AN ERROR
+        showPopUp("Error with the file that contains questions and answer.(questions.txt)\n(You probably just have to add some questions and answers in the file)");
+
 }
 
 MainWindow::~MainWindow()
