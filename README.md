@@ -1,6 +1,6 @@
 # Questions-and-Answers
 
-A testing software, that reads from a file questions and answers and saves the name, surname and grade (max grade 10) of the user, after finishing the test.
+A testing software, that reads from a file the questions and the answers and saves the name, surname and grade (max grade 10) of the user, after finishing the test.
 
 To add some questions and answers it is just needed to:
 
